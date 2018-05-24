@@ -1,0 +1,380 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: Microsoft YaHei UI;
+}
+.clear{
+	clear: both;
+}
+/*头部*/
+.header{
+	background: #07cbc9;
+	width: 100%;
+	height: 80px;
+}
+
+.header .logo{
+	width: 260px;
+	float: left;
+	height: 80px;
+	padding-left: 100px;
+}
+
+.header .logo img{
+	width: 260px;
+	height: 48px;
+	padding-top: 16px
+}
+
+.header .nav{
+	float: right;
+	padding-right:100px;
+}
+
+.header .nav ul{
+	width: 720px;
+	height: 80px
+}
+
+.header .nav ul li{
+	float: left;
+	width: 120px;
+	height: 80px;
+	list-style: none;
+	color: #FFF;
+	font-size: 20px;
+	font-weight: bolder;
+	line-height: 80px;
+	text-align: center;
+}
+
+.header .nav ul li:hover{
+	background: #000;
+}
+/*banner图*/
+.banner{
+	width: 100%;
+	height: 600px;
+}
+
+.banner img{
+	width: 100%;
+	height: 600px;
+}
+
+.banner .shader{
+	width: 100%;
+	height: 600px;
+	background: #000;
+	position: absolute;
+	top:80px;
+	left: 0;
+	opacity: 0.5;
+	z-index: 1;
+}
+
+.banner .shader_top{
+	width: 550px;
+	height: 230px;
+	position: absolute;
+	top:380px;
+	margin-top: -190px;
+	right: 50%;
+	margin-right: -225px; 
+	z-index: 2;
+}
+
+
+.banner .shader_top form input{
+	width: 530px;
+	height: 50px;
+	background: transparent;
+	margin-bottom: 20px;
+	padding-left: 15px;
+	border: #8E8E8E solid 1px;
+	text-align: left;
+}
+
+.banner .shader_top form .comment input{
+	width: 530px;
+	height: 100px;
+	background: transparent;
+	margin-bottom: 20px;
+	text-align: left;
+	padding-left: 15px;
+}
+
+.banner .shader_top form input:hover{
+	border: #07cbc9 solid 1px;
+}
+
+.banner .shader_top  .button button{
+	width: 200px;
+	height: 60px;
+	color:  #8E8E8E;
+	background: transparent;
+	text-align: center;
+	border: #8E8E8E solid 1px;
+}
+
+.banner .shader_top  .button{
+	margin: 0 auto;
+	text-align: center;
+}
+
+.banner .shader_top  .button button:hover{
+	background: #07cbc9;
+	color: #FFF;
+	border: none;
+	cursor:pointer;
+}
+/*about区*/
+.about{
+	width: 100%;
+	height: 1570px;
+}
+/*上半部分*/
+.about .top .title{
+	width: 500px;
+	height:200px;
+	margin: 40px auto;
+}
+
+.about .top .title .title_top{
+	font-size: 45px;
+	font-weight: bolder;
+}
+
+.about .top .title .title_top hr{
+	height: 2px;
+	border: none;
+	border-top: 2px #07cbc9 solid;
+	margin: 15px 225px;
+}
+
+.about .top .title .title_bottom{
+	color: #8E8E8E;
+	line-height:30px;
+}
+/*中间部分*/
+.about .contant_1{
+	width: 100%;
+	height: 350px;
+	margin: 0 auto;
+}
+
+.about .contant_1 .contant_1_left{
+	float: left;
+	width: 240px;
+	height: 350px;
+	font-size: 40px;
+	padding-right: 40px;
+	padding-left: 22%;
+}
+
+
+.about .contant_1 .contant_1_content{
+	float: left;
+	margin:0 auto;
+}
+
+.about .contant_1 .contant_1_content img{
+	width: 580px;
+	height: 390px;
+}
+
+.about .contant_1 .contant_1_right{
+	float: right;
+	width: 250px;
+	height: 330px;
+	padding-right: 18%
+}
+
+.about .contant_1 .contant_1_right .ri_con{
+	width: 250px;
+	height: 150px;
+	border: 1px solid #07cbc9;
+	margin-bottom: 15px;
+}
+
+.about .contant_1 .contant_1_right .ri_con .math{
+	width: 250px;
+	height: 70px;
+	line-height: 70px;
+	font-size: 30px;
+	font-weight: bolder;
+}
+
+.about .contant_1 .contant_1_right .ri_con .font{
+	width: 250px;
+	height: 80px;
+	line-height: 80px;
+	font-size: 25px;
+}
+
+.about .contant_1 .contant_1_right .ri_con hr{
+	border:none;
+	border-top: 2px solid #07cbc9;
+	margin:0 100px;
+}
+
+.about .contant_1 .contant_1_lay{
+	width: 340px;
+	height: 200px;
+	text-align: left;
+	padding: 20px;
+	font-size: 16px;
+	line-height: 25px;
+	border: 1px solid #8E8E8E;
+	background: transparent;
+	position: absolute;
+	top: 1080px;
+	left: 430px;
+	z-index: 2;
+}
+
+.about .contant_1 .contant_1_lay button{
+	color: #FFF;
+	background: #000;
+	width: 90px;
+	height: 40px;
+	margin-top: 20px;
+}
+
+.about .contant_1 .contant_1_lay button:hover{
+	color: #000;
+	background: transparent;
+	border: 1px #000 solid;
+}
+/*下部分*/
+.about .bottom{
+	width: 100%;
+	height:680px;
+	margin-top: 100px;
+}
+
+.about .bottom .bottom_1{
+	width: 100%;
+	height: 340px;
+}
+
+.about .bottom .bottom_1 .bottom_li{
+	width: 25%;
+	height: 340px;
+	background: #07cbc9;
+	float: left;
+}
+
+.about .bottom .bottom_1 .bottom_jp{
+	width: 25%;
+	height: 340px;
+	float: left;
+}
+
+.about .bottom .bottom_1 .bottom_jp img{
+	width: 100%;
+	height: 340px;
+}
+
+.about .bottom .bottom_1 .bottom_li .bottom_li_ti{
+	color: #FFF;
+	font-size: 30px;
+	line-height: 45px;
+	margin: 30px 0 0 50px;
+	text-align: left;
+}
+
+.about .bottom .bottom_1 .bottom_li .bottom_li_1{
+	color: rgb(247,245,245);
+	font-size: 20px;
+	line-height: 30px;
+	text-align: left;
+	margin: 15px 0 0 50px;
+}
+
+.about .bottom .bottom_1 .bottom_li .bottom_li_2{
+	color: #8E8E8E;
+	font-size: 15px;
+	line-height: 20px;
+	text-align: left;
+	margin: 10px 0 0 50px;
+}
+
+.about .bottom .bottom_1 .bottom_li .bottom_li_bu button{
+	color: #FFF;
+	background: #000;
+	width: 100px;
+	height: 40px;
+	border:none;
+	margin-top: 25px; 
+}
+
+.about .bottom .bottom_1 .bottom_li .bottom_li_bu button:hover{
+	border:1px solid #000;
+	background: transparent;
+}
+/*gallery区域*/
+
+/*上半区*/
+.gallery .gallery_top .title{
+	width: 500px;
+	height:200px;
+	margin: 0px auto;
+}
+
+.gallery .gallery_top .title .title_top{
+	font-size: 45px;
+	font-weight: bolder;
+}
+
+.gallery .gallery_top .title .title_top hr{
+	height: 2px;
+	border: none;
+	border-top: 2px #07cbc9 solid;
+	margin: 15px 225px;
+}
+
+.gallery .gallery_top .title .title_bottom{
+	color: #8E8E8E;
+	line-height:30px;
+}
+/*下半部分*/
+.gallery .gallery_bottom .gal_1{
+	width: 1000px;
+	height: 260px;
+	margin: 0 auto;
+}
+
+.gallery .gallery_bottom .gal_1 .gal_con{
+	width: 310px;
+	height: 260px;
+	float: left;
+	margin: 10px 10px 0px 10px;
+}
+
+.gallery .gallery_bottom .gal_1 .gal_con img{
+	width: 310px;
+	height: 200px;
+	vertical-align:bottom;
+}
+
+.gallery .gallery_bottom .gal_1 .gal_con .gal_wo{
+	width: 290px;
+	height: 50px;
+	background: #000;
+	color: #FFF;
+	line-height: 50px;
+	text-align: left;
+	padding-left: 20px;
+	margin: 0;
+}
+/*脚部*/
+.footer{
+	width: 100%;
+	height: 80px;
+	background:  #07cbc9;
+	color: #FFF;
+	margin-top: 50px;
+	line-height: 80px;
+}
