@@ -1,0 +1,78 @@
+*{
+	margin: 0;
+	font-size: 22px;
+	font-family:  Microsoft YaHei;
+}
+
+.banner{
+	height: 520px;
+	width: 1200px;
+	margin: 100px auto;
+}
+
+#menu{
+	height: 60px;
+	width: 1200px;
+}
+
+
+
+.submenu{
+	float: left;
+	width: 300px;
+	height: 60px;
+	text-align: center;
+	line-height: 60px;
+	color: #666;
+	cursor: pointer;
+	border-radius:5px;
+}
+
+.m_color1{
+	background: #ffcc00;
+	font-weight: bold;
+}
+
+.m_color2{
+	background: #fff;
+}
+
+.m_color3{
+	background: #fff;
+}
+
+
+.m_color4{
+	background: #fff;
+}
+
+#image{
+	height: 460px;
+	width: 1200px;
+	overflow: hidden;
+}
+
+.image_nav{
+	float: left;
+	height: 460px;
+	width: 1200px;
+	background-repeat:no-repeat;
+	display: none;
+}
+
+.slide1{
+	background-image: url(../img/1.jpg);
+	display: block;
+}
+
+.slide2{
+	background-image: url(../img/2.jpg);
+}
+
+.slide3{
+	background-image: url(../img/3.jpg);
+}
+
+.slide4{
+	background-image: url(../img/4.jpg);
+}
