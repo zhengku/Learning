@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>js_birth</title>
+</head>
+<body>
+	<script>
+		function birth() {
+			// 计算自己出生是当前的第几天
+			var year,month,day,date=0;
+			year=prompt("请输入您的出生年份");
+			//判断年份是否输入正确
+
+			if (year.length!=4){
+				return alert("请输入正确的年份");
+			}
+
+			month=prompt("请输入您的出生月份");
+			month=Number(month);
+			//判断月份是否输入正确
+			if (month>12 || month<1){
+				return alert("请输入正确的月份");
+			}
+
+			day=prompt("请输入您的出生日期");
+			day=Number(day);
+			//判断日期是否输入正确
+			if (day>31 || day<1){
+				return alert("请输入正确的日期");
+			}
+
+			if (year%4==0&&year%100!=0||year%400==0){
+				switch (month){
+					case 1:date=0;
+					break;
+					case 2:date=31;
+					break;
+					case 3:date=60;
+					break;
+					case 4:date=91;
+					break;
+					case 5:date=121;
+					break;
+					case 6:date=152;
+					break;
+					case 7:date=182;
+					break;
+					case 8:date=213;
+					break;
+					case 9:date=244;
+					break;
+					case 10:date=274;
+					break;
+					case 11:date=305;
+					break;
+					default:date=335;
+				};
+			}else{
+				switch (month){
+					case 1:date=0;
+					break;
+					case 2:date=31;
+					break;
+					case 3:date=59;
+					break;
+					case 4:date=90;
+					break;
+					case 5:date=120;
+					break;
+					case 6:date=151;
+					break;
+					case 7:date=181;
+					break;
+					case 8:date=212;
+					break;
+					case 9:date=243;
+					break;
+					case 10:date=273;
+					break;
+					case 11:date=304;
+					break;
+					default:date=334;
+				};
+
+			}
+            date+=day;
+
+			document.write("您的生日在"+year+"的第"+date+"天");
+
+		}
+		birth();
+	</script>
+	
+</body>
+</html>
