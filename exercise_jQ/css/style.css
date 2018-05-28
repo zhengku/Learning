@@ -1,0 +1,94 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+/*轮播图样式*/
+.banner{
+	width:1240px;
+	height: 500px;
+	background-color: #bbb; 
+	margin: 200px auto;
+	position: relative;
+}
+.picture{
+	width: 1200px;
+	height: 460px;
+	marker-top:20px;
+	margin:  auto;
+	position: absolute;
+	top:20px;
+	left: 20px;
+	background-repeat: no-repeat;
+	display: none;
+	overflow: hidden;
+}
+/*图片显示和隐藏*/
+.hide{
+	display: block;
+}
+/*图片背景*/
+.pic1{
+	background-image: url(../image/1.jpg);
+}
+.pic2{
+	background-image: url(../image/2.jpg);
+}
+.pic3{
+	background-image: url(../image/3.jpg);
+}
+.pic4{
+	background-image: url(../image/4.jpg);
+}
+.pic5{
+	background-image: url(../image/5.jpg);
+}
+
+/*箭头*/
+#left{
+	width: 40px;
+	height: 80px;
+	position: absolute;
+	top:210px;
+	left: 20px;
+	z-index: 999;
+	text-align: center;
+	line-height: 95px;
+}
+#right{
+	width: 40px;
+	height: 80px;
+	position: absolute;
+	top:210px;
+	left: 1180px;
+	z-index: 999;
+	text-align: center;
+	line-height: 95px;
+}
+/*箭头遮罩*/
+div#left:hover{
+	background-color: rgba(7, 17, 27, 0.4);
+}
+div#right:hover{
+	background-color: rgba(7, 17, 27, 0.4);
+}
+/*圆点*/
+.dots{
+	position: absolute;
+	z-index: 999;
+	top: 440px;
+	left: 1050px;
+}
+span{
+	float: left;
+	height: 17px;
+	width: 17px;
+	margin-left: 10px;
+	background-color: rgba(7, 17, 27, 0.4);
+	cursor: pointer;
+	border-radius: 50%;
+	box-shadow: 0 0 0 3px rgba(255, 255, 255, 1) inset;
+}
+.select{
+	background-color: #fff;
+	box-shadow: 0 0 0 3px rgba(7, 17, 27, 0.4) inset;
+}
