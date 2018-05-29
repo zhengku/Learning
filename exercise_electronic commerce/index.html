@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WaterFall</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<!-- 顶部 -->
+	<div class="top" id="top">
+		<div class="top-center">
+			<!-- 顶部左半部分，注册和登录 -->
+			<div class="top-left">
+				<ul>
+					<li class="sign-color" id="loginHtml">亲，请登录</li>
+					<li>免费注册</li>
+					<li>手机逛淘宝</li>
+				</ul>
+			</div>
+			<!-- 顶部有部分，放置有内容 -->
+			<div class="top-right">
+				<ul>
+					<li id="topFirst">我的慕淘&nbsp;&nbsp;<img src="img/icon/22.png" alt="word" width="12px" height="13px">
+						<div class="top-nav-first top-nav" id="top-nav-first">
+							<div class="top-nav-one">已买到的宝贝</div>
+							<div class="top-nav-one">我的足迹</div>
+						</div>
+					</li>
+					<li id="topSecond">收藏夹&nbsp;&nbsp;<img src="img/icon/22.png" alt="word" width="12px" height="13px">
+					<div class="top-nav-first top-nav" id="top-nav-second">
+							<div class="top-nav-one">收藏的宝贝</div>
+							<div class="top-nav-one">收藏的店铺</div>
+						</div>
+					</li>
+					<li>商品分类</li>
+					<li id="topThird">卖家中心&nbsp;&nbsp;<img src="img/icon/22.png" alt="word" width="12px" height="13px">
+					<div class="top-nav-first top-nav" id="top-nav-third">
+							<div class="top-nav-one">免费开店</div>
+							<div class="top-nav-one">已卖出的宝贝</div>
+							<div class="top-nav-one">出售中的宝贝</div>
+							<div class="top-nav-one">卖家服务中心</div>
+							<div class="top-nav-one">卖家培训中心</div>
+							<div class="top-nav-one">体验中心</div>
+						</div>
+					</li>
+					<li id="topFourth">联系客服&nbsp;&nbsp;<img src="img/icon/22.png" alt="word" width="12px" height="13px">
+					<div class="top-nav-first top-nav" id="top-nav-fourth">
+							<div class="top-nav-one">消费者客服</div>
+							<div class="top-nav-one">卖家客服</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- 遮罩 -->
+	<div id="layer-mask"></div>
+	<!-- 登录窗口内容 -->
+	<div id="layer-pop" 	class="layer-pop">
+		<div id="layer-top" class="layer-top">
+			<div id="layer-sign" class="clickStyle layer-sign">登录</div>
+			<div id="layer-register" class="layer-register">注册</div>
+			<div id="layer-close" class="layer-close"><img src="img/icon/20.png"></div>
+		</div>
+		<div id="layer-content" class="layer-content">
+			<form>
+				<input class="layer-text" id="userNumber" placeholder="请输入登录邮箱/手机号">
+				<p class="errorword" id='errorwordone'></p>
+				<input type="password" class="layer-text" id="passwordNumber" placeholder="6-16位密码，区分大小写，不能用空格">
+				<p class="errorword" id="errorwordtwo"></p>
+				<input id="ckbox" type="checkbox" checked="checked"><span class="layerword">&nbsp;&nbsp;下次自动登录</span><span class="layerwjmm"><a href="#">忘记密码</a></span>
+				<button id="inspect" class="inspect">登录</button>
+			</form>
+			<div class="layer-img">
+				<div><img src="img/icon/xinlang.png"></div>
+				<div><img src="img/icon/weixin.png"></div>
+				<div><img src="img/icon/QQ.png"></div>
+			</div>
+		</div>
+	</div>
+	<!-- 注册窗口 -->
+	<div id="reg-pop" class="layer-pop" style="height: 360px;">
+		<div id="reg-top" class="layer-top">
+			<div id="reg-sign" class="layer-sign">登录</div>
+			<div id="reg-register" class="layer-register clickStyle">注册</div>
+			<div id="reg-close" class="layer-close"><img src="img/icon/20.png"></div>
+		</div>
+		<div id="reg-content" class="layer-content" style="height: 210px;">
+			<form>
+				<input class="layer-text" id="reguserNumber" placeholder="请输入注册邮箱/手机号">
+				<p class="errorword" id='errorwordthree'></p>
+				<input type="password" class="layer-text" id="regpasswordNumber" placeholder="请创建6-16位密码，区分大小写，不能用空格">
+				<p class="errorword" id="errorwordfour"></p>
+				<button id="inspect" class="inspect" style="margin-top: 0;">登录</button>
+			</form>
+			<div class="layer-img">
+				<div><img src="img/icon/xinlang.png"></div>
+				<div><img src="img/icon/weixin.png"></div>
+				<div><img src="img/icon/QQ.png"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- logo区 -->
+	<div class="logo">
+		<div class="logo-center">
+			<!-- logo图片 -->
+			<div class="logo-img"><img src="img/logo.png" alt="logo"></div>
+			<!-- 搜索栏 -->
+			<div class="serch">
+				<form >
+					<input type="text" placeholder="灵魂美食一元抢"><button>搜索</button>
+				</form>
+			</div>
+			<!-- 购物车 -->
+			<div class="shoppingCar" id="shoppingCar">
+				<img id="leftImg" src="img/icon/26.png" width="12px" height="12px">&nbsp;&nbsp;购物车&nbsp;&nbsp;|&nbsp;&nbsp;0&nbsp;&nbsp;<img id="rightImg" src="img/icon/23.png" width="12px" height="12px">
+				<div class="shoppingContent" id="shoppingContent">
+					<div class="shoppingWord">最新加入的商品</div>
+					<div class="shoppingNum">
+						<div class="shoppingGoods">
+							<img class="goodsLeft" src="img/cart/1.png" alt="">
+							<div class="goodsWord">
+								<p class="changeGoodsword">adidas 阿迪达斯 训练 男子</p>
+								<p>￥ 335 × 1</p>
+							</div>
+							<img class="goodsRight" src="img/icon/20.png" >
+						</div>
+						<div class="shoppingGoods">
+							<img class="goodsLeft" src="img/cart/2.png" alt="">
+							<div class="goodsWord">
+								<p class="changeGoodsword">玉兰油多效修护三部曲套装</p>
+								<p>￥ 199 × 1</p>
+							</div>
+							<img class="goodsRight" src="img/icon/20.png" >
+						</div>
+						<div class="shoppingGoods">
+							<img class="goodsLeft" src="img/cart/3.png" alt="">
+							<div class="goodsWord">
+								<p class="changeGoodsword">Apple iPhone 7 (A1660)</p>
+								<p>￥ 6188 × 1</p>
+							</div>
+							<img class="goodsRight" src="img/icon/20.png" >
+						</div>
+						<div class="shoppingGoods">
+							<img class="goodsLeft" src="img/cart/4.png" alt="">
+							<div class="goodsWord">
+								<p class="changeGoodsword">飞利浦面条机 HR2356/31</p>
+								<p>￥ 659 × 1</p>
+							</div>
+							<img class="goodsRight" src="img/icon/20.png" >
+						</div>
+						<div class="shoppingGoods">
+							<img class="goodsLeft" src="img/cart/5.png" alt="">
+							<div class="goodsWord">
+								<p class="changeGoodsword">罗技G29 力反馈游戏方向</p>
+								<p>￥ 2999 × 1</p>
+							</div>
+							<img class="goodsRight" src="img/icon/20.png" >
+						</div>
+						<div class="shoppingGoods">
+							<img class="goodsLeft" src="img/cart/1.png" alt="">
+							<div class="goodsWord">
+								<p class="changeGoodsword">adidas 阿迪达斯 训练 男子</p>
+								<p>￥ 335 × 1</p>
+							</div>
+							<img class="goodsRight" src="img/icon/20.png" >
+						</div>
+						<div class="shoppingGoods">
+							<img class="goodsLeft" src="img/cart/2.png" alt="">
+							<div class="goodsWord">
+								<p class="changeGoodsword">玉兰油多效修护三部曲套装</p>
+								<p>￥ 199 × 1</p>
+							</div>
+							<img class="goodsRight" src="img/icon/20.png" >
+						</div>
+						<div class="shoppingGoods">
+							<img class="goodsLeft" src="img/cart/3.png" alt="">
+							<div class="goodsWord">
+								<p class="changeGoodsword">Apple iPhone 7 (A1660)</p>
+								<p>￥ 6188 × 1</p>
+							</div>
+							<img class="goodsRight" src="img/icon/20.png" >
+						</div>
+						<div class="shoppingGoods">
+							<img class="goodsLeft" src="img/cart/4.png" alt="">
+							<div class="goodsWord">
+								<p class="changeGoodsword">飞利浦面条机 HR2356/31</p>
+								<p>￥ 659 × 1</p>
+							</div>
+							<img class="goodsRight" src="img/icon/20.png" >
+						</div>
+						<div class="shoppingGoods">
+							<img class="goodsLeft" src="img/cart/5.png" alt="">
+							<div class="goodsWord">
+								<p class="changeGoodsword">罗技G29 力反馈游戏方向</p>
+								<p>￥ 2999 × 1</p>
+							</div>
+							<img class="goodsRight" src="img/icon/20.png" >
+						</div>
+					</div>
+					<div class="shoppingPlay">共 27 件商品 共计 ￥0.00<button>去购物车</button></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- 导航区 -->
+	<div class="nav">
+		<ul>
+			<li>数码城</li>
+			<li>天黑黑</li>
+			<li>团购</li>
+			<li>发现</li>
+			<li>二手特价</li>
+			<li>名品汇</li>
+		</ul>
+	</div>
+
+	<!-- benner区 -->
+	<div class="banner">
+		<!-- 菜单栏 -->
+		<div class="banner-nav">
+			<p><img src="img/icon/18.png">商品分类</p>
+			<ul>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;家用电器<span>></span>
+
+			<!-- 		
+				<div class="bannerNavContent" id="navOne">
+					<div class="bannerChNav">
+					<div class="chNavTitle">复读机</div>
+					<ul>
+						<li>手机</li>
+						<li>对讲机</li>
+						<li>以旧换新</li>
+						<li>手机维修</li>
+					</ul>
+				</div>
+			</div> -->
+
+
+
+				</li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;手机、运营商、数码<span>></span></li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;电脑、办公<span>></span></li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;家居、家具、家装、厨具<span>></span></li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;男装、女装、童装、内衣<span>></span></li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;化妆、清洁、宠物<span>></span></li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;运动户外、钟表<span>></span></li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;汽车、汽车用品<span>></span></li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;母婴、玩具乐器<span>></span></li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;食品、酒类、生鲜、特产<span>></span></li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;医药保健<span>></span></li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;图书、音像、电子书<span>></span></li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;彩票、旅行、充值、票务<span>></span></li>
+				<li>&nbsp;&nbsp;&nbsp;&nbsp;理财、众筹、白条、保险<span>></span></li>
+			</ul>
+			<!-- <div class="bannerNavContent" id="navOne">
+				<div class="bannerChNav">
+					<div class="chNavTitle">复读机</div>
+					<ul>
+						<li>手机</li>
+						<li>对讲机</li>
+						<li>以旧换新</li>
+						<li>手机维修</li>
+					</ul>
+				</div>
+			</div> -->
+			<div class="bannerNavContent" id="navTwo"></div>
+		</div>
+		<!-- 轮播图内容 -->
+		<div class="banner-content">
+			<div class="banner-slide slide1 show"></div>
+			<div class="banner-slide slide2"><img src="img/focus-carousel/2.jpg" height="504px" ="504px" alt=""></div>
+			<div class="banner-slide slide3"><img src="img/focus-carousel/3.jpg" height="504px" ="504px" alt=""></div>
+			<div class="banner-slide slide4"><img src="img/focus-carousel/4.jpg" height="504px" ="504px" alt=""></div>
+			<div class="banner-slide slide5"><img src="img/focus-carousel/5.jpg" height="504px" ="504px" alt=""></div>
+			<div class="bannerLeft" id="bannerLeft"><img src="img/focus-carousel/pre2.png" alt=""></div>
+			<div class="bannerRight" id="bannerRight"><img src="img/focus-carousel/pre.png" alt=""></div>
+			<div class="dots">
+				<span class="select"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<!-- 新闻 -->
+		<div class="banner-news">
+			<table border="1px" bordercolor="#d7d8dc" cellspacing="0">
+				<tr>
+					<td colspan="4" width="250px" height="200px">
+						<p id="banner-news-title">慕快报<span>更多></span></p>
+						<p class="banner-news-content"><b>[特惠]</b>精选图书每满150减50</p>
+						<p class="banner-news-content"><b>[公告]</b>因广州图书仓搬仓升级配送延迟</p>
+						<p class="banner-news-content"><b>[特惠]</b>爆款手机12期免息 抽奖赢电视</p>
+						<p class="banner-news-content"><b>[公告]</b>广东、福建受台风影响配送延迟</p>
+						<p class="banner-news-content"><b>[特惠]</b>大闸蟹领券满399减180</p>
+					</td>
+				</tr>
+				<tr>
+					<td width="62px" height="71px" class="news-block"><img src="img/icon/1.png"><p>话费</p></td>
+					<td class="news-block"><img src="img/icon/2.png"><p>机票</p></td>
+					<td class="news-block"><img src="img/icon/3.png"><p>电影票</p></td>
+					<td class="news-block"><img src="img/icon/4.png"><p>游戏</p></td>
+				</tr>
+				<tr>
+					<td width="62px" height="71px" class="news-block"><img src="img/icon/5.png"><p>彩票</p></td>
+					<td class="news-block"><img src="img/icon/6.png"><p>加油站</p></td>
+					<td class="news-block"><img src="img/icon/7.png"><p>酒店</p></td>
+					<td class="news-block"><img src="img/icon/8.png"><p>火车票</p></td>
+				</tr>
+				<tr>
+					<td width="62px" height="71px" class="news-block"><img src="img/icon/9.png"><p>众筹</p></td>
+					<td class="news-block"><img src="img/icon/10.png"><p>理财</p></td>
+					<td class="news-block"><img src="img/icon/11.png"><p>礼品卡</p></td>
+					<td class="news-block"><img src="img/icon/12.png"><p>白条</p></td>
+				</tr>
+				<tr>
+					<td colspan="4" width="248px" height="83px"><img src="img/ad.png" width="248px" height="83px" style="display: block"></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<!-- 楼层区 -->
+	<div class="content">
+		<!-- 楼层块 -->
+		<div class="stair" id="oneSaitr">
+			<!-- 楼层导航 -->
+			<div class="stair-nav">
+				<div class="stairnum">1F</div>
+				<div class="stair-nav-left">服装鞋包</div>
+				<div class="stair-nav-right">
+					<ul>
+						<li>热门&nbsp;&nbsp;&nbsp;&nbsp;|<div class="redarrow"><img src="img/floor-arrow.png"></div></li>
+						<li>男装&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+						<li>女装</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 楼层内容 -->
+			<div class="stair-content">
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/1.png"></div>
+					<div class="goodsword"><p>匡威男棒球开衫外套2015</p><p class="goodsmoney">￥479</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/1.png"></div>
+					<div class="goodsword"><p>adidas 阿迪达斯 训练 男子</p><p class="goodsmoney">￥335</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/1.jpg"></div>
+					<div class="goodsword"><p>必迈BMAI——体织跑步短袖T恤</p><p class="goodsmoney">￥159</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/1.jpg"></div>
+					<div class="goodsword"><p>NBA袜子半毛圈运动高邦棉袜</p><p class="goodsmoney">￥65</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/1.png"></div>
+					<div class="goodsword"><p>特步官方运动帽男女帽子2016</p><p class="goodsmoney">￥69</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/1.png"></div>
+					<div class="goodsword"><p>KELME足球训练防寒防风手套</p><p class="goodsmoney">￥4999</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/2.jpg"></div>
+					<div class="goodsword"><p>战地吉普三合一冲锋衣</p><p class="goodsmoney">￥289</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/2.jpg"></div>
+					<div class="goodsword"><p>探路者户外男士徒步鞋</p><p class="goodsmoney">￥369</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/1.png"></div>
+					<div class="goodsword"><p>羽绒服2015秋冬新款轻薄男士</p><p class="goodsmoney">￥399</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/1.png"></div>
+					<div class="goodsword"><p>溯溪鞋涉水鞋户外鞋</p><p class="goodsmoney">￥689</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/3.jpg"></div>
+					<div class="goodsword"><p>旅行背包多功能双肩背包</p><p class="goodsmoney">￥269</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/3.jpg"></div>
+					<div class="goodsword"><p>户外旅行双肩包OS0099</p><p class="goodsmoney">￥99</p></div>
+				</div>
+			</div>
+		</div>
+		<!-- 楼层块 -->
+		<div class="stair" id="twoSaitr">
+			<!-- 楼层导航 -->
+			<div class="stair-nav">
+				<div class="stairnum">2F</div>
+				<div class="stair-nav-left">个护美妆</div>
+				<div class="stair-nav-right">
+					<ul>
+						<li>热门&nbsp;&nbsp;&nbsp;&nbsp;|<div class="redarrow"><img src="img/floor-arrow.png"></div></li>
+						<li>国际大牌&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+						<li>国际名品</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 楼层内容 -->
+			<div class="stair-content">
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/5.jpg"></div>
+					<div class="goodsword"><p>韩束红石榴鲜活水盈七件套装</p><p class="goodsmoney">￥169</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/5.jpg"></div>
+					<div class="goodsword"><p>温碧泉八杯水亲亲水润五件套装</p><p class="goodsmoney">￥198</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/5.jpg"></div>
+					<div class="goodsword"><p>御泥坊红酒透亮矿物蚕丝面膜贴</p><p class="goodsmoney">￥79.9</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/5.jpg"></div>
+					<div class="goodsword"><p>吉列手动剃须刀锋隐致护</p><p class="goodsmoney">￥228</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/5.jpg"></div>
+					<div class="goodsword"><p>Mediheal水润保湿面膜</p><p class="goodsmoney">￥119</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/5.jpg"></div>
+					<div class="goodsword"><p>纳益其尔芦荟舒缓保湿凝胶</p><p class="goodsmoney">￥39</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/1.png"></div>
+					<div class="goodsword"><p>宝拉甄选基础护肤旅行四件套</p><p class="goodsmoney">￥299</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/1.png"></div>
+					<div class="goodsword"><p>温碧泉透心润五件套装</p><p class="goodsmoney">￥257</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/1.png"></div>
+					<div class="goodsword"><p>玉兰油多效修复三部曲套装</p><p class="goodsmoney">￥199</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/1.png"></div>
+					<div class="goodsword"><p>LOREAL火山岩控油清痘洁面膏</p><p class="goodsmoney">￥36</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/1.png"></div>
+					<div class="goodsword"><p>百雀羚水嫩倍现盈透精华水</p><p class="goodsmoney">￥139</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/1.png"></div>
+					<div class="goodsword"><p>珀莱雅新柔晶莹润三件套</p><p class="goodsmoney">￥99</p></div>
+				</div>
+			</div>
+		</div>
+		<!-- 楼层块 -->
+		<div class="stair" id="threeSaitr">
+			<!-- 楼层导航 -->
+			<div class="stair-nav">
+				<div class="stairnum">3F</div>
+				<div class="stair-nav-left">手机通讯</div>
+				<div class="stair-nav-right">
+					<ul>
+						<li>热门&nbsp;&nbsp;&nbsp;&nbsp;|<div class="redarrow"><img src="img/floor-arrow.png"></div></li>
+						<li>品质优选&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+						<li>新机尝试</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 楼层内容 -->
+			<div class="stair-content">
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/7.jpg"></div>
+					<div class="goodsword"><p>摩托罗拉 Moto Z Play</p><p class="goodsmoney">￥3999</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/7.jpg"></div>
+					<div class="goodsword"><p>Apple iPhone 7 (A1660)</p><p class="goodsmoney">￥6188</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/7.jpg"></div>
+					<div class="goodsword"><p>小米 Note 全网通 白色</p><p class="goodsmoney">￥999</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/7.jpg"></div>
+					<div class="goodsword"><p>小米5 全网通 标准版 3GB内存</p><p class="goodsmoney">￥1999</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/7.jpg"></div>
+					<div class="goodsword"><p>荣耀7i 海岛蓝 移动联通4G手机</p><p class="goodsmoney">￥1099</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/7.jpg"></div>
+					<div class="goodsword"><p>乐视（le）乐2（X620）32GB</p><p class="goodsmoney">￥1099</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/7.jpg"></div>
+					<div class="goodsword"><p>OPPO R9 4GB+64GB内存版</p><p class="goodsmoney">￥2499</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/7.jpg"></div>
+					<div class="goodsword"><p>魅蓝note3 全网通公开版</p><p class="goodsmoney">￥899</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/7.jpg"></div>
+					<div class="goodsword"><p>飞利浦 X818 香槟金 全网通4G</p><p class="goodsmoney">￥1998</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/7.jpg"></div>
+					<div class="goodsword"><p>三星 Galaxy S7（G9300）</p><p class="goodsmoney">￥4088</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/7.jpg"></div>
+					<div class="goodsword"><p>华为 荣耀7 双卡双待双通</p><p class="goodsmoney">￥1128</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/7.jpg"></div>
+					<div class="goodsword"><p>努比亚(nubia)Z7Max(NX505J)</p><p class="goodsmoney">￥728</p></div>
+				</div>
+			</div>
+		</div>
+		<!-- 楼层块 -->
+		<div class="stair" id="fourSaitr">
+			<!-- 楼层导航 -->
+			<div class="stair-nav">
+				<div class="stairnum">4F</div>
+				<div class="stair-nav-left">家用电器</div>
+				<div class="stair-nav-right">
+					<ul>
+						<li>热门&nbsp;&nbsp;&nbsp;&nbsp;|<div class="redarrow"><img src="img/floor-arrow.png"></div></li>
+						<li>大家电&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+						<li>生活电器</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 楼层内容 -->
+			<div class="stair-content">
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/8.jpg"></div>
+					<div class="goodsword"><p>风暴TV 超体电视 40X 40英寸</p><p class="goodsmoney">￥1299</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/8.jpg"></div>
+					<div class="goodsword"><p>小米（MI）L55M5-AA 55英寸</p><p class="goodsmoney">￥3699</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/8.jpg"></div>
+					<div class="goodsword"><p>飞利浦HTD5580/93 音响</p><p class="goodsmoney">￥2999</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/8.jpg"></div>
+					<div class="goodsword"><p>金门子H108 5.1套装音响组合</p><p class="goodsmoney">￥1198</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/8.jpg"></div>
+					<div class="goodsword"><p>方太ENJOY云魔方抽抽油烟机</p><p class="goodsmoney">￥4930</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/8.jpg"></div>
+					<div class="goodsword"><p>美的60升预约洗浴电热水器</p><p class="goodsmoney">￥1099</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/8.jpg"></div>
+					<div class="goodsword"><p>九阳电饭煲多功能智能电饭煲</p><p class="goodsmoney">￥159</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/8.jpg"></div>
+					<div class="goodsword"><p>美的电烤箱家用大容量</p><p class="goodsmoney">￥329</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/8.jpg"></div>
+					<div class="goodsword"><p>奥克斯（AUX）936破壁料理机</p><p class="goodsmoney">￥1599</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/8.jpg"></div>
+					<div class="goodsword"><p>飞利浦面条机 HR2356/31</p><p class="goodsmoney">￥665</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/8.jpg"></div>
+					<div class="goodsword"><p>松下NU-JA100W 家用蒸烤箱</p><p class="goodsmoney">￥1799</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/8.jpg"></div>
+					<div class="goodsword"><p>飞利浦咖啡机 HD775/00</p><p class="goodsmoney">￥1299</p></div>
+				</div>
+			</div>
+		</div>
+		<!-- 楼层块 -->
+		<div class="stair" id="fiveSaitr">
+			<!-- 楼层导航 -->
+			<div class="stair-nav">
+				<div class="stairnum">5F</div>
+				<div class="stair-nav-left">电脑数码</div>
+				<div class="stair-nav-right">
+					<ul>
+						<li>热门&nbsp;&nbsp;&nbsp;&nbsp;|<div class="redarrow"><img src="img/floor-arrow.png"></div></li>
+						<li>电脑平板&nbsp;&nbsp;&nbsp;&nbsp;|</li>
+						<li>潮流影音</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 楼层内容 -->
+			<div class="stair-content">
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/9.jpg"></div>
+					<div class="goodsword"><p>戴尔成就Vostro 3800-R6308</p><p class="goodsmoney">￥2999</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/9.jpg"></div>
+					<div class="goodsword"><p>联想IdeaCenter C560</p><p class="goodsmoney">￥5399</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/9.jpg"></div>
+					<div class="goodsword"><p>惠普260-p039cn台式电脑</p><p class="goodsmoney">￥3099</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/9.jpg"></div>
+					<div class="goodsword"><p>华硕飞行堡垒旗舰版FX-PRO</p><p class="goodsmoney">￥6599</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/9.jpg"></div>
+					<div class="goodsword"><p>惠普(HP)暗夜精灵ii代PLUS</p><p class="goodsmoney">￥12999</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/9.jpg"></div>
+					<div class="goodsword"><p>联想（Lenovo）小新700电竞版</p><p class="goodsmoney">￥5999</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/9.jpg"></div>
+					<div class="goodsword"><p>游戏背光牧马人机械手感键盘</p><p class="goodsmoney">￥499</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/9.jpg"></div>
+					<div class="goodsword"><p>罗技iK1200背光键盘保护套</p><p class="goodsmoney">￥799</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/9.jpg"></div>
+					<div class="goodsword"><p>西部数据2.5英寸移动硬盘1TB</p><p class="goodsmoney">￥419</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/9.jpg"></div>
+					<div class="goodsword"><p>新睿翼3TB 2.5英寸 移动硬盘</p><p class="goodsmoney">￥849</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/9.jpg"></div>
+					<div class="goodsword"><p>Rii mini i28无线迷你键盘鼠标</p><p class="goodsmoney">￥349</p></div>
+				</div>
+				<div class="stair-content-goods">
+					<div class="goodsimg"><img src="img/floor/9.jpg"></div>
+					<div class="goodsword"><p>罗技G29 力反馈游戏方向盘</p><p class="goodsmoney">￥2999</p></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 左侧楼层 -->
+	<div class="leftNav" id="leftNav">
+		<div class="leftNum" id='classone'><a href="#oneSaitr" class="leftSelect">1F</a></div>
+		<div class="leftNum" id='classtwo'><a href="#twoSaitr">2F</a></div>
+		<div class="leftNum" id='classthree'><a href="#threeSaitr">3F</a></div>
+		<div class="leftNum" id='classfour'><a href="#fourSaitr">4F</a></div>
+		<div class="leftNum" id='classfive'><a href="#fiveSaitr">5F</a></div>
+	</div>
+
+
+	<!-- 友情链接 -->
+	<div class="fslnk">
+		<div class="fslnk-ch">
+			<p class="fslnk-title">消费者保障</p>
+			<div class="fslnk-content">
+				<ul>
+					<li>保障消费</li>
+					<li>退货退款流程</li>
+					<li>服务中心</li>
+					<li>更多特色服务</li>
+				</ul>
+			</div>
+		</div>
+		<div class="fslnk-ch">
+			<p class="fslnk-title">新手上路</p>
+			<div class="fslnk-content">
+				<ul>
+					<li>新手专区</li>
+					<li>消费警示</li>
+					<li>交易安全</li>
+					<li>24小时在线帮助</li>
+					<li>免费开店</li>
+				</ul>
+			</div>
+		</div>
+		<div class="fslnk-ch">
+			<p class="fslnk-title">付款方式</p>
+			<div class="fslnk-content">
+				<ul>
+					<li>快捷支付</li>
+					<li>信用卡</li>
+					<li>余额包</li>
+					<li>蜜蜂花呗</li>
+					<li>货到付款</li>
+				</ul>
+			</div>
+		</div>
+		<div class="fslnk-ch">
+			<p class="fslnk-title">慕淘特色</p>
+			<div class="fslnk-content">
+				<ul>
+					<li>手机慕淘</li>
+					<li>慕淘信</li>
+					<li>大众评审</li>
+					<li>B格指南</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<!-- 页脚 -->
+	<div class="footer">
+		<div class="footnav">
+			<ul>
+				<li>关于慕淘</li>
+				<li>合作伙伴</li>
+				<li>营销中心</li>
+				<li>廉正举报</li>
+				<li>联系客服</li>
+				<li>开放平台</li>
+				<li>诚征英才</li>
+				<li>联系我们</li>
+				<li>网站地图</li>
+				<li>法律声明</li>
+				<li>知识产权</li>
+			</ul>
+		</div>
+		<div class="copyright">&copy; 2016 imooc.com All Rights Reserved</div>
+	</div>
+
+	<!-- 右侧栏 -->
+	<div class="rightTip">
+		<div class="tipContent"><img src="img/icon/13.png" alt="">
+			<div class="tipsCh">用户名</div>
+		</div>
+		<div class="tipContent"><img src="img/icon/14.png" alt="">
+			<div class="tipsCh">购物车</div>
+		</div>
+		<div class="tipContent"><img src="img/icon/15.png" alt="">
+			<div class="tipsCh">我的喜好</div>
+		</div>
+		<div class="tipContent"><img src="img/icon/16.png" alt="">
+			<div class="tipsCh">我的消息</div>
+		</div>
+		<div class="tipContent"><a href="#top"><img src="img/icon/17.png" alt=""></a>
+			<div class="tipsCh">返回顶部</div>
+		</div>
+	</div>
+	<!-- jQuery链接 -->
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
