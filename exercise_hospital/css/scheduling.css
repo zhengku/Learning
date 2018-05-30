@@ -1,0 +1,191 @@
+.arrange{
+	margin-top: 45px;
+}
+
+.arr-title{
+	font-size: 16px;
+}
+
+.arr-title a{
+	padding-left: 15px;
+	color: #00b3ec;	
+}
+
+.arr-content{
+	height: 323px;
+	border: 1px solid #dcdddd;
+	margin-top: 18px;
+}
+
+.arr-footer{
+	height: 64px;
+	border: 1px solid #dcdddd;
+	border-top: none;
+	color: #9f9f9f;
+	line-height: 64px;
+	text-align: center;
+}
+
+.cont-left{
+	float: left;
+	position: relative;
+	width: 729px;
+	height: 323px;
+}
+
+.date-left{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 35px;
+	height: 323px;
+	border-right: 1px solid #dcdddd;
+	background-color: #f2f8ff;
+}
+
+.date-left p{
+	position: absolute;
+	left: 7px;
+	font-size: 12px;
+}
+
+.prev{
+	width: 34px;
+	height: 44px;
+}
+
+.prev img{
+	width: 100%;
+	height: 100%;
+}
+
+.next{
+	width: 34px;
+	height: 44px;
+}
+
+.next img{
+	width: 100%;
+	height: 100%;
+}
+
+.date-right{
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 35px;
+	height: 323px;
+	border-left: 1px solid #dcdddd;
+	background-color: #f2f8ff;
+}
+
+.cont-title{
+	margin-top: 20px;
+	height: 44px;
+	font-size: 14px;
+}
+
+.cont-title p{
+	padding-left: 30px;
+	line-height: 44px;
+}
+
+.cont-title p span{
+	font-size: 12px;
+	color: #00b3ea;
+}
+
+.cont-right{
+	float: right;
+	width: 248px;
+	height: 303px;
+	border-left: 1px solid #dcdddd;
+	padding: 10px;
+	font-size: 12px;
+	overflow: auto;
+}
+
+.cont-right p{
+	height: 20px;
+	line-height: 20px;
+}
+
+.cont-right span{
+	padding-left: 10px;
+	color: #888888;
+}
+
+.arr-footer p{
+	display: inline-block;
+	padding-left: 23px;
+	background: url(../img/icon-info.jpg) no-repeat;
+	height: 20px;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.arr-date{
+	position: absolute;
+	width: 657px;
+	height: 323px;
+	left: 36px;
+	/*overflow: hidden;*/
+}
+
+.ui-time-wrap{
+	width: 99999px;
+	height: 323px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	transition: all .5s;
+}
+
+.arr-date table{
+	position: absolute;
+	top: 0;
+	display: block;
+}
+
+.arr-date table td{
+	border:1px solid #dcdddd;
+	width: 93px;
+	height: 92px;
+	border-top: none;
+	border-left: none;
+	text-align: center;
+	color: #4ab4ed;
+}
+
+.arr-date table .arr-time{
+	width: 93px;
+	height:44px;
+	border-top: none;
+	border-left: none;
+}
+
+.arr-time p{
+	font-size: 12px;
+	color: #868686;
+}
+
+/*.arr-top{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 44px;
+	width: 657px;
+}
+
+.arr-bottom{
+	position: absolute;
+	top: 44px;
+	width: 657px;
+	height: 278px;
+	border-top: 1px solid #dcdddd;
+}
+
+.bot-work{
+	width: 93px;
+	height: 92px;
+}*/

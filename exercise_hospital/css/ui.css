@@ -1,0 +1,62 @@
+/*搜索ui组件*/
+
+.ui-search{
+	background:url(../img/ui-search.jpg) no-repeat center;
+	position: relative;
+	color: #fff;
+	font-size: 14px;
+}
+
+.ui-search-selected{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 70px;
+	height: 38px;
+	line-height: 38px;
+	text-indent: 14px;
+}
+
+.ui-search-list{
+	display: none;
+	position: absolute;
+	width: 67px;
+	line-height: 24px;
+	background-color: #fff;
+	box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+	left: 2px;
+	top: 36px;
+	z-index: 2;
+}
+
+.ui-search-list a{
+	display: block;
+	color: #a5a2a2;
+	text-align: center;
+}
+
+.ui-search-list a:hover{
+	background-color: #ebeef5;
+}
+
+.ui-search-input{
+	width: 208px;
+	height: 26px;
+	position: absolute;
+	top: 8px;
+	left: 73px;
+	line-height: 26px;
+	font-size: 13px;
+	color: #a5a2a2;
+	border: none;
+	outline: none;
+}
+
+.ui-search-submit{
+	position: absolute;
+	display: block;
+	right: 0;
+	top: 1px;
+	width: 40px;
+	height: 36px;
+}
